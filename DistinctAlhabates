@@ -122,7 +122,7 @@ public class DistinctAlhabates {
 	public static void main(String[] args) {
 
 		Scanner s = new Scanner(System.in);
-      	String str = s.nextLine();
+      		String str = s.nextLine();
 		DistinctAlhabates distinctAlhabates = new DistinctAlhabates();
     
 		System.out.print(distinctAlhabates.put(str).calculateChars());
