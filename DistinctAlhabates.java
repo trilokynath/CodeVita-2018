@@ -5,11 +5,9 @@ public class DistinctAlhabates {
 	ArrayList<Character> characters = new ArrayList<>();
 	
 	public DistinctAlhabates put(String str){
-		
-      for (int i = 0; i < str.length(); i++)
-      {
-        inputint.add(str.charAt(i) - '0');
-      }
+		for (int i = 0; i < str.length(); i++){
+			inputint.add(str.charAt(i) - '0');
+		}
 		return this;
 	}
 
