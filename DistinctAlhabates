@@ -24,6 +24,28 @@ public class DistinctAlhabates {
 		}
 	}
 	
+	public char getKey(int a){
+		switch(a){
+		case 2:
+			return 'A';
+		case 3:
+			return 'D';
+		case 4:
+			return 'G';
+		case 5:
+			return 'J';
+		case 6:
+			return 'M';
+		case 7:
+			return 'P';
+		case 8:
+			return 'T';
+		case 9:
+			return 'W';
+		}
+		return '\0';
+	}
+	
 	public char getKey(int a, int b){
 		switch(a){
 		case 2:
@@ -106,13 +128,13 @@ public class DistinctAlhabates {
 		return '\0';
 	}
 	
-	public int calculateChars(){
+	public int get(){
 		
 		for(int i=0;i<inputint.size();i++){
 			if(i==0){
-				addChar(getKey(inputint.get(i),0));
+				addChar(getKey(inputint.get(i)));
 			}else{
-				addChar(getKey(inputint.get(i),0));
+				addChar(getKey(inputint.get(i)));
 				addChar(getKey(inputint.get(i), inputint.get(i-1)));
 			}
 		}
@@ -122,9 +144,10 @@ public class DistinctAlhabates {
 	public static void main(String[] args) {
 
 		Scanner s = new Scanner(System.in);
-      		String str = s.nextLine();
+      	String str = s.nextLine();
 		DistinctAlhabates distinctAlhabates = new DistinctAlhabates();
+		distinctAlhabates.put(str);
     
-		System.out.print(distinctAlhabates.put(str).calculateChars());
+		System.out.print(distinctAlhabates.get());
 	}
 }
