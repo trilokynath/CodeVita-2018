@@ -126,8 +126,7 @@ public class DistinctAlhabates {
 		return '\0';
 	}
 	
-	public int get(){
-		
+	public int get(){		
 		for(int i=0;i<inputint.size();i++){
 			if(i==0){
 				addChar(getKey(inputint.get(i)));
@@ -142,10 +141,9 @@ public class DistinctAlhabates {
 	public static void main(String[] args) {
 
 		Scanner s = new Scanner(System.in);
-      	String str = s.nextLine();
+      		String str = s.nextLine();
 		DistinctAlhabates distinctAlhabates = new DistinctAlhabates();
 		distinctAlhabates.put(str);
-    
 		System.out.print(distinctAlhabates.get());
 	}
 }
